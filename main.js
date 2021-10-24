@@ -17,17 +17,17 @@ for (const link of links) {
   });
 }
 
-//colocar sobra quando der scroll
-const header = document.querySelector("#header");
-const navHeight = header.offsetHeight;
+//colocar sombra quando der scroll
+function changeHeaderWhenScroll () {
+  const header = document.querySelector("#header");
+  const navHeight = header.offsetHeight;
 
-window.addEventListener("scroll", function () {
   if (window.scrollY >= navHeight) {
     header.classList.add("scroll");
   } else {
     header.classList.remove("scroll");
   }
-});
+}
 
 //testimonials carousel slider swiper
 const swiper = new Swiper(".swiper", {
@@ -51,7 +51,24 @@ const scrollReveal = ScrollReveal ({
 })
 
 scrollReveal.reveal(
-    `#home .text, #home .image, #about .image, #about .text, #services .card, #testimonials .testimonials, #contact .links
+    `#home .text, #home .image, #about .image, #about .text, #services .card, #testimonials .testimonials, #contact .links, footer .brand, footer .social
     `, { interval: 100 })
+
+//back to top
+function backToTop() {
+const backToTopButton = document.querySelector('.back-to-top')
+
+  if(window.scrollY >= 560) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+}
+
+//when scroll
+window.addEventListener("scroll", function () {
+  changeHeaderWhenScroll ()
+  backToTop()
+});
 
 //DOM - document object model
