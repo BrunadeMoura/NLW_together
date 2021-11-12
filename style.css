@@ -93,7 +93,6 @@ body {
   );
 }
 
-
 /*----------------layout----------------*/
 .container {
   margin-left: 1.5rem;
@@ -245,7 +244,7 @@ nav .icon-close {
   opacity: 0;
 
   position: absolute;
-  top : -1.5rem;
+  top: -1.5rem;
   right: 1.5rem;
 
   transition: 0.2s;
@@ -271,7 +270,7 @@ nav.show div.icon-close {
 }
 
 #home .image::before {
-  content: "";
+  content: '';
   height: 100%;
   width: 100%;
   background: var(--base-color-second);
@@ -286,8 +285,8 @@ nav.show div.icon-close {
   right: 2.93rem;
 }
 
-#home .image::before,
-#home .image img {
+#home .image img,
+#home .image::before {
   border-radius: 0.25rem;
 }
 
@@ -319,7 +318,7 @@ nav.show div.icon-close {
 }
 
 #about .image::before {
-  content: "";
+  content: '';
   height: 100%;
   width: 100%;
   background: var(--base-color-second);
@@ -333,8 +332,8 @@ nav.show div.icon-close {
   position: relative;
 }
 
-#about .image::before,
-#about .image img {
+#about .image img,
+#about .image::before {
   border-radius: 0.25rem;
 }
 
@@ -376,6 +375,8 @@ nav.show div.icon-close {
 #testimonials .container {
   margin-left: 0;
   margin-right: 0;
+  position: relative;
+  overflow: hidden;
 }
 
 #testimonials header {
@@ -392,7 +393,7 @@ nav.show div.icon-close {
 
 #testimonials blockquote p {
   position: relative;
-  text-indent:1.875rem;
+  text-indent: 1.875rem;
   margin-bottom: 1.5rem; 
   color: var(--title-color);
 }
@@ -426,9 +427,13 @@ nav.show div.icon-close {
   padding: 4rem 1rem;
 }
 
+.swiper-pagination-bullet {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
 .swiper-pagination-bullet-active {
    background: var(--base-color);
-
 }
 
 /*----------------contact----------------*/
@@ -600,12 +605,16 @@ footer .social a:hover {
     order: 1;
   }
 
+  #home .image img {
+    right: 0;
+  }
+
   #home .text {
     order: 0;
     max-width: 24rem;
     text-align: left;
   }
-
+  
   /*about*/
   #about .container {
     margin: 0 auto;
