@@ -12,7 +12,7 @@
 ![Captura de tela 2022-01-29 093131](https://user-images.githubusercontent.com/61100366/163693672-7f05aaa8-052e-4f42-9375-7aab4f5535e2.png)
 
 ## 📁 Acesso ao projeto
-Você pode acessar o projeto por aqui: https://brunademoura.github.io/NLW_together/#contact
+Você pode acessar o projeto por aqui: https://brunademoura.github.io/NLW_together/
 <br>
 <br>
 ## 🛠️ Abrir e rodar o projeto
